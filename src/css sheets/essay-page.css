@@ -1,6 +1,6 @@
 .essay-div{
     text-align: left;
-    width: 90%;
+    width: 50vw;
 }
 
 .title-input{
@@ -11,4 +11,12 @@
 .paragraph-area{
     width: 80%;
     font-size: 14pt;
+}
+
+.essay-instructions{
+    font-size: 14pt;
+}
+
+.essay-accordion{
+    width: 100%;
 }
