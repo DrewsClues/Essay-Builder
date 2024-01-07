@@ -1,4 +1,5 @@
 import React from "react"
+import Accordion from 'react-bootstrap/Accordion';
 import "../css sheets/essay-page.css";
 
 
@@ -8,35 +9,52 @@ function Persuasive() {
       <>
         <div className="essay-div">
             <h1>Persuasive Essay</h1>
-            <div>
-                <h2>Title</h2>
-                <input className="title-input"></input>
-            </div>
+           
+            <Accordion defaultActiveKey={['0']} alwaysOpen>
+                <Accordion.Item eventKey="0">
+                    <Accordion.Header>Essay Title</Accordion.Header>
+                    <Accordion.Body>
+                        <input className="title-input"></input>
+                    </Accordion.Body>
+                </Accordion.Item>
 
-            <div>
-                <h2>Introduction</h2>
-                <textarea className="paragraph-area"></textarea>
-            </div>
+                <Accordion.Item eventKey="1">
+                    <Accordion.Header>Introduction</Accordion.Header>
+                    <Accordion.Body>
+                        <textarea className="paragraph-area"></textarea>
+                    </Accordion.Body>
+                </Accordion.Item>
 
-            <div>
-                <h2>Body Paragraph 1</h2>
-                <textarea className="paragraph-area"></textarea>
-            </div>
+                <Accordion.Item eventKey="2">
+                    <Accordion.Header>Body Paragraph 1</Accordion.Header>
+                    <Accordion.Body>
+                        <textarea className="paragraph-area"></textarea>
+                    </Accordion.Body>
+                </Accordion.Item>
 
-            <div>
-                <h2>Body Paragraph 2</h2>
-                <textarea className="paragraph-area"></textarea>
-            </div>
+                <Accordion.Item eventKey="3">
+                    <Accordion.Header>Body Paragraph 2</Accordion.Header>
+                    <Accordion.Body>
+                        <textarea className="paragraph-area"></textarea>
+                    </Accordion.Body>
+                </Accordion.Item>
 
-            <div>
-                <h2>Body Paragraph 3</h2>
-                <textarea className="paragraph-area"></textarea>
-            </div>
+                <Accordion.Item eventKey="3">
+                    <Accordion.Header>Body Paragraph 3</Accordion.Header>
+                    <Accordion.Body>
 
-            <div>
-                <h2>Conclusion</h2>
-                <textarea className="paragraph-area"></textarea>
-            </div>
+                    </Accordion.Body>
+                </Accordion.Item>
+
+                <Accordion.Item eventKey="4">
+                    <Accordion.Header>Conclusion</Accordion.Header>
+                    <Accordion.Body>
+                        <textarea className="paragraph-area"></textarea>
+                    </Accordion.Body>
+                </Accordion.Item>
+            </Accordion>
+
+            
         </div>
       </>
     )
