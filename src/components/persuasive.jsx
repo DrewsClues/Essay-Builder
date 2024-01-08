@@ -1,5 +1,5 @@
 import React from "react"
-import { ProgressBar, Accordion, Form, Button } from "react-bootstrap";
+import { ProgressBar, Accordion, Form, Button, Dropdown, DropdownButton } from "react-bootstrap";
 import "../css sheets/essay-page.css";
 
 
@@ -146,6 +146,29 @@ ${conclusion}
 
         return <ProgressBar now={progressbar} label={`${progressbar}%`} />
       }
+
+
+    function Listingtransitions() {
+    return (
+        <Dropdown>
+        <Dropdown.Toggle variant="success" id="dropdown-basic">
+            Listing Transitions
+        </Dropdown.Toggle>
+    
+        <Dropdown.Menu>
+            <Dropdown.Item >First,</Dropdown.Item>
+            <Dropdown.Item >Firstly,</Dropdown.Item>
+            <Dropdown.Item >First of all,</Dropdown.Item>
+            <Dropdown.Item >Next,</Dropdown.Item>
+            <Dropdown.Item >Secondly,</Dropdown.Item>
+            <Dropdown.Item >Second of all,</Dropdown.Item>
+            <Dropdown.Item >Furthermore,</Dropdown.Item>
+            <Dropdown.Item >To continue,</Dropdown.Item>
+            <Dropdown.Item >Thirdly,</Dropdown.Item>
+        </Dropdown.Menu>
+        </Dropdown>
+    );
+    }
     
     
 
@@ -215,6 +238,9 @@ ${conclusion}
                             Begin with a topic sentence that tells the reader what your first paragraph is about.
                             Try to use about FIVE SENTENCES to explain your reason using two details and two examples for each. 
                         </p>
+                        <div className="button-div">
+                            <Listingtransitions/>
+                        </div>
                         <textarea 
                         value={body1}
                         onChange={(e) => setBody1(e.target.value)}
