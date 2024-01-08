@@ -27,64 +27,76 @@ function Persuasive() {
     //Check for changes in textareas to update check boxes
       React.useEffect(() => {
         if (
-          title !== ''
+          title !== '' && titleisChecked == false
         ) {
             setTitletisChecked(true);
+            setProgressbar(progressbar + 5)
         }
         if (
-            title == ''
+            title == '' && titleisChecked == true
           ) {
               setTitletisChecked(false);
+              setProgressbar(progressbar - 5)
           }
         if (
-            introduction !== ''
+            introduction !== '' && introisChecked == false
         ) {
             setIntroisChecked(true);
+            setProgressbar(progressbar + 17.5)
         }
         if (
-            introduction == ''
+            introduction == '' && introisChecked == true
         ) {
             setIntroisChecked(false);
+            setProgressbar(progressbar - 17.5)
             }
         if (
-            body1 !== ''
+            body1 !== '' && body1isChecked == false
         ) {
             setBody1isChecked(true);
+            setProgressbar(progressbar + 20)
         }
         if (
-            body1 == ''
+            body1 == '' && body1isChecked == true
         ) {
             setBody1isChecked(false);
+            setProgressbar(progressbar - 20)
             }
         if (
-            body2 !== ''
+            body2 !== '' && body2isChecked == false
         ) {
             setBody2isChecked(true);
+            setProgressbar(progressbar + 20)
         }
         if (
-            body2 == ''
+            body2 == '' && body2isChecked == true
         ) {
             setBody2isChecked(false);
+            setProgressbar(progressbar - 20)
             }
         if (
-            body3 !== ''
+            body3 !== '' && body3isChecked == false
         ) {
             setBody3isChecked(true);
+            setProgressbar(progressbar + 20)
         }
         if (
-            body3 == ''
+            body3 == '' && body3isChecked == true
         ) {
             setBody3isChecked(false);
+            setProgressbar(progressbar - 20)
             }
         if (
-            conclusion !== ''
+            conclusion !== '' && conclusionisChecked == false
         ) {
             setConclusionisChecked(true);
+            setProgressbar(progressbar + 17.5)
         }
         if (
-            conclusion == ''
+            conclusion == '' && conclusionisChecked == true
         ) {
             setConclusionisChecked(false);
+            setProgressbar(progressbar - 17.5)
             }
           
       }, [title, introduction, body1, body2, body3, conclusion, titleisChecked]);
@@ -98,6 +110,20 @@ function Persuasive() {
 
 
     function CompileEssay (){
+        if (
+            titleisChecked === false || 
+            introisChecked === false || 
+            body1isChecked === false || 
+            body2isChecked === false || 
+            body3isChecked === false || 
+            conclusionisChecked === false
+        ) {
+            alert("You've left a section blank, double check and make sure to complete your essay 100% :) ")
+            return;
+        }
+
+
+
         setFinish(
             `${title}
 
