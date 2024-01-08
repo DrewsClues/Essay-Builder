@@ -11,12 +11,29 @@
 .paragraph-area{
     width: 80%;
     font-size: 14pt;
+    height: 300pt;
 }
 
 .essay-instructions{
-    font-size: 14pt;
+    font-size: 16pt;
 }
 
 .essay-accordion{
     width: 100%;
+}
+
+.essay-buttons{
+    padding: 5px;
+}
+
+.button-div{
+    padding: 5px;
+}
+.checkbox-container{
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px; 
+}
+.essay-checkbox{
+    padding: 20px;
 }
