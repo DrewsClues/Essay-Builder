@@ -4,6 +4,10 @@ import "../css sheets/essay-page.css";
 
 
 function Persuasive() {
+    //State of progressbar
+    const [progressbar, setProgressbar] = React.useState(0)
+
+    //States of User Input Areas
     const [title, setTitle] = React.useState('');
     const [introduction, setIntroduction] = React.useState('');
     const [body1, setBody1] = React.useState('');
@@ -12,12 +16,84 @@ function Persuasive() {
     const [conclusion, setConclusion] = React.useState('');
     const [finish, setFinish] = React.useState('');
 
-    const [titleisChecked, setTtletisChecked] = useState(false);
-    const [introisChecked, setIntroisChecked] = useState(false);
-    const [body1isChecked, setBody1isChecked] = useState(false);
-    const [body2isChecked, setBody2isChecked] = useState(false);
-    const [body3isChecked, setBody3isChecked] = useState(false);
-    const [conclusionisChecked, setConclusionisChecked] = useState(false);
+    //States for checkboxes
+    const [titleisChecked, setTitletisChecked] = React.useState(false);
+    const [introisChecked, setIntroisChecked] = React.useState(false);
+    const [body1isChecked, setBody1isChecked] = React.useState(false);
+    const [body2isChecked, setBody2isChecked] = React.useState(false);
+    const [body3isChecked, setBody3isChecked] = React.useState(false);
+    const [conclusionisChecked, setConclusionisChecked] = React.useState(false);
+
+    //Check for changes in textareas to update check boxes
+      React.useEffect(() => {
+        if (
+          title !== ''
+        ) {
+            setTitletisChecked(true);
+        }
+        if (
+            title == ''
+          ) {
+              setTitletisChecked(false);
+          }
+        if (
+            introduction !== ''
+        ) {
+            setIntroisChecked(true);
+        }
+        if (
+            introduction == ''
+        ) {
+            setIntroisChecked(false);
+            }
+        if (
+            body1 !== ''
+        ) {
+            setBody1isChecked(true);
+        }
+        if (
+            body1 == ''
+        ) {
+            setBody1isChecked(false);
+            }
+        if (
+            body2 !== ''
+        ) {
+            setBody2isChecked(true);
+        }
+        if (
+            body2 == ''
+        ) {
+            setBody2isChecked(false);
+            }
+        if (
+            body3 !== ''
+        ) {
+            setBody3isChecked(true);
+        }
+        if (
+            body3 == ''
+        ) {
+            setBody3isChecked(false);
+            }
+        if (
+            conclusion !== ''
+        ) {
+            setConclusionisChecked(true);
+        }
+        if (
+            conclusion == ''
+        ) {
+            setConclusionisChecked(false);
+            }
+          
+      }, [title, introduction, body1, body2, body3, conclusion]);
+
+
+
+
+
+
 
 
 
@@ -41,8 +117,8 @@ ${conclusion}
 
 
     function EssayProgression() {
-        const now = 0;;
-        return <ProgressBar now={now} label={`${now}%`} />
+
+        return <ProgressBar now={progressbar} label={`${progressbar}%`} />
       }
     
     
@@ -60,7 +136,8 @@ ${conclusion}
                 <Accordion.Item eventKey="0">
                     <Accordion.Header> 
                         <label className="checkbox-container">
-                            <input type="checkbox" className="essay-checkbox" />
+                            <input type="checkbox" className="essay-checkbox" 
+                                checked={titleisChecked} />
                             <span className="checkmark"></span>
                         </label>  Essay Title</Accordion.Header>
                     <Accordion.Body>
@@ -78,7 +155,7 @@ ${conclusion}
                 <Accordion.Item eventKey="1">
                     <Accordion.Header>
                         <label className="checkbox-container">
-                            <input type="checkbox" className="essay-checkbox" />
+                            <input type="checkbox" className="essay-checkbox" checked={introisChecked} />
                             <span className="checkmark"></span>
                         </label>Introduction</Accordion.Header> 
                     <Accordion.Body>
@@ -104,7 +181,7 @@ ${conclusion}
                 <Accordion.Item eventKey="2">
                     <Accordion.Header>
                         <label className="checkbox-container">
-                            <input type="checkbox" className="essay-checkbox" />
+                            <input type="checkbox" className="essay-checkbox" checked={body1isChecked} />
                             <span className="checkmark"></span>
                         </label>Body Paragraph 1</Accordion.Header>
                     <Accordion.Body>
@@ -122,7 +199,7 @@ ${conclusion}
                 <Accordion.Item eventKey="3">
                     <Accordion.Header>
                     <label className="checkbox-container">
-                            <input type="checkbox" className="essay-checkbox" />
+                            <input type="checkbox" className="essay-checkbox"  checked={body2isChecked}/>
                             <span className="checkmark"></span>
                     </label>Body Paragraph 2</Accordion.Header>
                     <Accordion.Body>
@@ -140,7 +217,7 @@ ${conclusion}
                 <Accordion.Item eventKey="4">
                     <Accordion.Header>
                         <label className="checkbox-container">
-                            <input type="checkbox" className="essay-checkbox" />
+                            <input type="checkbox" className="essay-checkbox" checked={body3isChecked}/>
                             <span className="checkmark"></span>
                         </label>Body Paragraph 3</Accordion.Header>
                     <Accordion.Body>
@@ -159,7 +236,7 @@ ${conclusion}
                 <Accordion.Item eventKey="5">
                     <Accordion.Header>
                         <label className="checkbox-container">
-                            <input type="checkbox" className="essay-checkbox" />
+                            <input type="checkbox" className="essay-checkbox"  checked={conclusionisChecked}/>
                             <span className="checkmark"></span>
                         </label>Conclusion</Accordion.Header>
                     <Accordion.Body>
