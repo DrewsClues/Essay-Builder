@@ -87,7 +87,7 @@ function Persuasive() {
             setConclusionisChecked(false);
             }
           
-      }, [title, introduction, body1, body2, body3, conclusion]);
+      }, [title, introduction, body1, body2, body3, conclusion, titleisChecked]);
 
 
 
