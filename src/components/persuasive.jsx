@@ -190,25 +190,25 @@ ${conclusion}
         );
         }
 
-        function Transitiontonextpoint() {
-            return (
-                <Dropdown>
-                <Dropdown.Toggle id="dropdown-basic" className="transition-instructions">
-                    Next point Transitions
-                </Dropdown.Toggle>
-            
-                <Dropdown.Menu>
-                    <Dropdown.Item >Moving on,</Dropdown.Item>
-                    <Dropdown.Item >Next,</Dropdown.Item>
-                    <Dropdown.Item >Another key point,</Dropdown.Item>
-                    <Dropdown.Item >Moving forward,</Dropdown.Item>
-                    <Dropdown.Item >To continue to my next point,</Dropdown.Item>
-                    <Dropdown.Item >To continue,</Dropdown.Item>
+    function Transitiontonextpoint() {
+        return (
+            <Dropdown>
+            <Dropdown.Toggle id="dropdown-basic" className="transition-instructions">
+                Next point Transitions
+            </Dropdown.Toggle>
         
-                </Dropdown.Menu>
-                </Dropdown>
-            );
-            }
+            <Dropdown.Menu>
+                <Dropdown.Item >Moving on,</Dropdown.Item>
+                <Dropdown.Item >Next,</Dropdown.Item>
+                <Dropdown.Item >Another key point,</Dropdown.Item>
+                <Dropdown.Item >Moving forward,</Dropdown.Item>
+                <Dropdown.Item >To continue to my next point,</Dropdown.Item>
+                <Dropdown.Item >To continue,</Dropdown.Item>
+    
+            </Dropdown.Menu>
+            </Dropdown>
+        );
+        }
 
     function Differencetransitions() {
         return (
