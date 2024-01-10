@@ -28,7 +28,18 @@
 
 .button-div{
     padding: 5px;
+    display: inline-flex;
+    margin-right: 10px; 
 }
+
+.transition-instructions{
+    margin-right: 5px;
+}
+
+.compile-button-div{
+    padding: 5px;
+}
+
 .checkbox-container{
     display: inline-block;
     vertical-align: middle;
@@ -38,4 +49,9 @@
     padding: 20px;
     height: 15px;
     width: 15px;
+}
+
+.progress-bar{
+    font-size: 14pt;
+    font-weight: bold;
 }

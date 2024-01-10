@@ -144,32 +144,131 @@ ${conclusion}
 
     function EssayProgression() {
 
-        return <ProgressBar now={progressbar} label={`${progressbar}%`} />
+        return <ProgressBar Classname="progress-bar" now={progressbar} label={`${progressbar}%`} />
       }
 
 
-    function Listingtransitions() {
+    function Evidencetransitions() {
     return (
         <Dropdown>
-        <Dropdown.Toggle variant="success" id="dropdown-basic">
-            Listing Transitions
+        <Dropdown.Toggle id="dropdown-basic" className="transition-instructions">
+            Evidence Transitions
         </Dropdown.Toggle>
     
         <Dropdown.Menu>
-            <Dropdown.Item >First,</Dropdown.Item>
-            <Dropdown.Item >Firstly,</Dropdown.Item>
-            <Dropdown.Item >First of all,</Dropdown.Item>
-            <Dropdown.Item >Next,</Dropdown.Item>
-            <Dropdown.Item >Secondly,</Dropdown.Item>
-            <Dropdown.Item >Second of all,</Dropdown.Item>
-            <Dropdown.Item >Furthermore,</Dropdown.Item>
-            <Dropdown.Item >To continue,</Dropdown.Item>
-            <Dropdown.Item >Thirdly,</Dropdown.Item>
+            <Dropdown.Item >For example,</Dropdown.Item>
+            <Dropdown.Item >For instance,</Dropdown.Item>
+            <Dropdown.Item >To illustrate,</Dropdown.Item>
+            <Dropdown.Item >To give an example,</Dropdown.Item>
+            <Dropdown.Item >As an example,</Dropdown.Item>
+            <Dropdown.Item >To illustrate my point,</Dropdown.Item>
+
         </Dropdown.Menu>
         </Dropdown>
     );
     }
+
+    function Reinforcementtransitions() {
+        return (
+            <Dropdown>
+            <Dropdown.Toggle id="dropdown-basic" className="transition-instructions">
+                Reinforcement Transitions
+            </Dropdown.Toggle>
+        
+            <Dropdown.Menu>
+                <Dropdown.Item >Additionally,</Dropdown.Item>
+                <Dropdown.Item >Furthermore,</Dropdown.Item>
+                <Dropdown.Item >Moreover,</Dropdown.Item>
+                <Dropdown.Item >In addition,</Dropdown.Item>
+                <Dropdown.Item >Also,</Dropdown.Item>
+                <Dropdown.Item >As well as that,</Dropdown.Item>
+                <Dropdown.Item >On top of that,</Dropdown.Item>
+                <Dropdown.Item >What's more,</Dropdown.Item>
     
+            </Dropdown.Menu>
+            </Dropdown>
+        );
+        }
+
+        function Transitiontonextpoint() {
+            return (
+                <Dropdown>
+                <Dropdown.Toggle id="dropdown-basic" className="transition-instructions">
+                    Next point Transitions
+                </Dropdown.Toggle>
+            
+                <Dropdown.Menu>
+                    <Dropdown.Item >Moving on,</Dropdown.Item>
+                    <Dropdown.Item >Next,</Dropdown.Item>
+                    <Dropdown.Item >Another key point,</Dropdown.Item>
+                    <Dropdown.Item >Moving forward,</Dropdown.Item>
+                    <Dropdown.Item >To continue to my next point,</Dropdown.Item>
+                    <Dropdown.Item >To continue,</Dropdown.Item>
+        
+                </Dropdown.Menu>
+                </Dropdown>
+            );
+            }
+
+    function Differencetransitions() {
+        return (
+            <Dropdown>
+            <Dropdown.Toggle id="dropdown-basic" className="transition-instructions">
+                Difference Transitions
+            </Dropdown.Toggle>
+        
+            <Dropdown.Menu>
+                <Dropdown.Item >However,</Dropdown.Item>
+                <Dropdown.Item >On the other hand,</Dropdown.Item>
+                <Dropdown.Item >On the contrary,</Dropdown.Item>
+                <Dropdown.Item >But,</Dropdown.Item>
+                <Dropdown.Item >Conversely,</Dropdown.Item>
+                <Dropdown.Item >In contrast,</Dropdown.Item>
+                <Dropdown.Item >Yet,</Dropdown.Item>
+                <Dropdown.Item >Although,</Dropdown.Item>
+            </Dropdown.Menu>
+            </Dropdown>
+        );
+        }
+
+    function Similartransitions() {
+        return (
+            <Dropdown>
+            <Dropdown.Toggle id="dropdown-basic" className="transition-instructions">
+                Similar Transitions
+            </Dropdown.Toggle>
+        
+            <Dropdown.Menu>
+                <Dropdown.Item >Similarly,</Dropdown.Item>
+                <Dropdown.Item >Likewise,</Dropdown.Item>
+                <Dropdown.Item >In the same way,</Dropdown.Item>
+                <Dropdown.Item >Just as,</Dropdown.Item>
+                <Dropdown.Item >Like,</Dropdown.Item>
+                <Dropdown.Item >As well as,</Dropdown.Item>
+                <Dropdown.Item >In a similar fashion,</Dropdown.Item>
+                <Dropdown.Item >Equally,</Dropdown.Item>
+            </Dropdown.Menu>
+            </Dropdown>
+        );
+        }
+    
+    function Conclusiontransitions() {
+        return (
+            <Dropdown>
+            <Dropdown.Toggle id="dropdown-basic" className="transition-instructions">
+                Conclusion Transitions
+            </Dropdown.Toggle>
+        
+            <Dropdown.Menu>
+                <Dropdown.Item >In conclusion,</Dropdown.Item>
+                <Dropdown.Item >To conclude,</Dropdown.Item>
+                <Dropdown.Item >In summary,</Dropdown.Item>
+                <Dropdown.Item >To sum up,</Dropdown.Item>
+
+            </Dropdown.Menu>
+            </Dropdown>
+        );
+        }
     
 
       
@@ -239,7 +338,9 @@ ${conclusion}
                             Try to use about FIVE SENTENCES to explain your reason using two details and two examples for each. 
                         </p>
                         <div className="button-div">
-                            <Listingtransitions/>
+                            <Evidencetransitions/>
+                            <Reinforcementtransitions/>
+                            <Transitiontonextpoint/>
                         </div>
                         <textarea 
                         value={body1}
@@ -259,6 +360,11 @@ ${conclusion}
                             Begin with a topic sentence that tells the reader what your second paragraph is about.
                             Try to use about FIVE SENTENCES to explain your reason using two details and two examples for each. 
                         </p>
+                        <div className="button-div">
+                            <Evidencetransitions/>
+                            <Reinforcementtransitions/>
+                            <Transitiontonextpoint/>
+                        </div>
                         <textarea 
                         value={body2}
                         onChange={(e) => setBody2(e.target.value)}
@@ -277,6 +383,11 @@ ${conclusion}
                             Begin with a topic sentence that tells the reader what your third paragraph is about.
                             Try to use about FIVE SENTENCES to explain your reason using two details and two examples for each. 
                         </p>
+                        <div className="button-div">
+                            <Evidencetransitions/>
+                            <Reinforcementtransitions/>
+                            <Transitiontonextpoint/>
+                        </div>
                         <textarea 
                         value={body3}
                         onChange={(e) => setBody3(e.target.value)}
@@ -304,6 +415,9 @@ ${conclusion}
                             <ul>
                                 - Finish with a clincher (Your last thoughts on the essay, for example "I think....", "I hope.....")
                             </ul>
+                        <div className="button-div">
+                            <Conclusiontransitions/>
+                        </div>
                         <textarea 
                         value={conclusion}
                         onChange={(e) => setConclusion(e.target.value)}
@@ -315,7 +429,7 @@ ${conclusion}
                 <Accordion.Item eventKey="6">
                     <Accordion.Header>Finished Essay</Accordion.Header>
                     <Accordion.Body>
-                        <div className="button-div">
+                        <div className="compile-button-div">
                             <Button className="essay-buttons" onClick={CompileEssay}>Compile Essay</Button>
                         </div>
                            
