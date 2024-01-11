@@ -415,7 +415,7 @@ ${conclusion}
                             <ul>
                                 - Finish with a clincher (Your last thoughts on the essay, for example "I think....", "I hope.....")
                             </ul>
-                        <div className="button-div">
+                        <div className="conclusion-button-div">
                             <Conclusiontransitions/>
                         </div>
                         <textarea 
