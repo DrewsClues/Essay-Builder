@@ -269,6 +269,27 @@ ${conclusion}
             </Dropdown>
         );
         }
+
+    function Finishingtransitions() {
+        return (
+            <Dropdown>
+            <Dropdown.Toggle id="dropdown-basic" className="transition-instructions">
+                Concluding Transitions
+            </Dropdown.Toggle>
+        
+            <Dropdown.Menu>
+                <Dropdown.Item >To sum up,</Dropdown.Item>
+                <Dropdown.Item >In any case,</Dropdown.Item>
+                <Dropdown.Item >Thus,</Dropdown.Item>
+                <Dropdown.Item >Therefore,</Dropdown.Item>
+                <Dropdown.Item >In the end,</Dropdown.Item>
+                <Dropdown.Item >Ultimately,</Dropdown.Item>
+                <Dropdown.Item >Finally,</Dropdown.Item>
+    
+            </Dropdown.Menu>
+            </Dropdown>
+        );
+        }
     
 
       
@@ -341,6 +362,7 @@ ${conclusion}
                             <Evidencetransitions/>
                             <Reinforcementtransitions/>
                             <Transitiontonextpoint/>
+                            <Finishingtransitions/>
                         </div>
                         <textarea 
                         value={body1}
@@ -364,6 +386,7 @@ ${conclusion}
                             <Evidencetransitions/>
                             <Reinforcementtransitions/>
                             <Transitiontonextpoint/>
+                            <Finishingtransitions/>
                         </div>
                         <textarea 
                         value={body2}
@@ -387,6 +410,7 @@ ${conclusion}
                             <Evidencetransitions/>
                             <Reinforcementtransitions/>
                             <Transitiontonextpoint/>
+                            <Finishingtransitions/>
                         </div>
                         <textarea 
                         value={body3}
