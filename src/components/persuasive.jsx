@@ -1,5 +1,6 @@
 import React from "react"
 import { ProgressBar, Accordion, Form, Button, Dropdown, DropdownButton } from "react-bootstrap";
+import { FaRegCopy } from "react-icons/fa";
 import "../css sheets/essay-page.css";
 
 
@@ -102,7 +103,21 @@ function Persuasive() {
       }, [title, introduction, body1, body2, body3, conclusion, titleisChecked]);
 
 
+      function Copyfinishedessay () {
+            const tempTextarea = document.createElement('textarea');
+            tempTextarea.value = finish;
 
+            document.body.appendChild(tempTextarea);
+
+            tempTextarea.select();
+            tempTextarea.setSelectionRange(0, 99999); // For mobile devices
+
+            document.execCommand('copy');
+
+            document.body.removeChild(tempTextarea);
+
+        alert("Completed essay copied to clipboard!")
+      }
 
 
 
@@ -151,7 +166,7 @@ ${conclusion}
     function Evidencetransitions() {
     return (
         <Dropdown>
-        <Dropdown.Toggle id="dropdown-basic" className="transition-instructions">
+        <Dropdown.Toggle variant="dark" id="dropdown-basic" className="transition-instructions">
             Evidence Transitions
         </Dropdown.Toggle>
     
@@ -171,7 +186,7 @@ ${conclusion}
     function Reinforcementtransitions() {
         return (
             <Dropdown>
-            <Dropdown.Toggle id="dropdown-basic" className="transition-instructions">
+            <Dropdown.Toggle variant="dark" id="dropdown-basic" className="transition-instructions" >
                 Reinforcement Transitions
             </Dropdown.Toggle>
         
@@ -193,7 +208,7 @@ ${conclusion}
     function Transitiontonextpoint() {
         return (
             <Dropdown>
-            <Dropdown.Toggle id="dropdown-basic" className="transition-instructions">
+            <Dropdown.Toggle variant="dark" id="dropdown-basic" className="transition-instructions">
                 Next point Transitions
             </Dropdown.Toggle>
         
@@ -213,7 +228,7 @@ ${conclusion}
     function Differencetransitions() {
         return (
             <Dropdown>
-            <Dropdown.Toggle id="dropdown-basic" className="transition-instructions">
+            <Dropdown.Toggle variant="dark" id="dropdown-basic" className="transition-instructions">
                 Difference Transitions
             </Dropdown.Toggle>
         
@@ -234,7 +249,7 @@ ${conclusion}
     function Similartransitions() {
         return (
             <Dropdown>
-            <Dropdown.Toggle id="dropdown-basic" className="transition-instructions">
+            <Dropdown.Toggle variant="dark" id="dropdown-basic" className="transition-instructions">
                 Similar Transitions
             </Dropdown.Toggle>
         
@@ -255,7 +270,7 @@ ${conclusion}
     function Conclusiontransitions() {
         return (
             <Dropdown>
-            <Dropdown.Toggle id="dropdown-basic" className="transition-instructions">
+            <Dropdown.Toggle variant="dark" id="dropdown-basic" className="transition-instructions">
                 Conclusion Transitions
             </Dropdown.Toggle>
         
@@ -273,7 +288,7 @@ ${conclusion}
     function Finishingtransitions() {
         return (
             <Dropdown>
-            <Dropdown.Toggle id="dropdown-basic" className="transition-instructions">
+            <Dropdown.Toggle variant="dark" id="dropdown-basic" className="transition-instructions">
                 Concluding Transitions
             </Dropdown.Toggle>
         
@@ -455,6 +470,7 @@ ${conclusion}
                     <Accordion.Body>
                         <div className="compile-button-div">
                             <Button className="essay-buttons" onClick={CompileEssay}>Compile Essay</Button>
+                            <FaRegCopy className="copy-icon" onClick={Copyfinishedessay}/>
                         </div>
                            
                            <textarea 

@@ -54,6 +54,7 @@
 
 .transition-instructions{
     margin-right: 5px;
+
 }
 
 .compile-button-div{
@@ -74,4 +75,15 @@
 .progress-bar{
     font-size: 14pt;
     font-weight: bold;
+}
+
+.copy-icon{
+    height: 30px;
+    width: 30px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.copy-icon:hover{
+    cursor: pointer;
 }
