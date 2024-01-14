@@ -165,12 +165,12 @@ ${conclusion}
 
     function Evidencetransitions() {
     return (
-        <Dropdown>
-        <Dropdown.Toggle variant="dark" id="dropdown-basic" className="transition-instructions">
+        <Dropdown >
+        <Dropdown.Toggle variant="dark" className="transition-instructions">
             Evidence Transitions
         </Dropdown.Toggle>
     
-        <Dropdown.Menu>
+        <Dropdown.Menu >
             <Dropdown.Item >For example,</Dropdown.Item>
             <Dropdown.Item >For instance,</Dropdown.Item>
             <Dropdown.Item >To illustrate,</Dropdown.Item>
