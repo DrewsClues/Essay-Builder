@@ -1,6 +1,7 @@
 import React from "react"
 import { ProgressBar, Accordion, Form, Button, Dropdown, DropdownButton } from "react-bootstrap";
 import { FaRegCopy } from "react-icons/fa";
+import { RiDownload2Fill } from "react-icons/ri";
 import "../css sheets/essay-page.css";
 
 
@@ -24,6 +25,23 @@ function Persuasive() {
     const [body2isChecked, setBody2isChecked] = React.useState(false);
     const [body3isChecked, setBody3isChecked] = React.useState(false);
     const [conclusionisChecked, setConclusionisChecked] = React.useState(false);
+
+
+    //Download finished essay
+    function downloadAsWordFile(content, filename) {
+        const blob = new Blob([content], { type: 'application/msword' });
+        const url = URL.createObjectURL(blob);
+        const link = document.createElement('a');
+        link.href = url;
+        link.download = filename + '.docx';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        alert("Downloading Essay as a Word Document")
+    }
+
+
+
 
     //Check for changes in textareas to update check boxes
       React.useEffect(() => {
@@ -154,6 +172,10 @@ ${conclusion}
             `
         )
     }
+
+
+
+
 
 
 
@@ -471,6 +493,8 @@ ${conclusion}
                         <div className="compile-button-div">
                             <Button className="essay-buttons" onClick={CompileEssay}>Compile Essay</Button>
                             <FaRegCopy className="copy-icon" onClick={Copyfinishedessay}/>
+                            <RiDownload2Fill className="download-icon" onClick={() => downloadAsWordFile(finish, 'document')}/>
+
                         </div>
                            
                            <textarea 
