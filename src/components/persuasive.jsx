@@ -2,7 +2,7 @@ import React from "react"
 import { ProgressBar, Accordion, Form, Button, Dropdown, DropdownButton } from "react-bootstrap";
 import { FaRegCopy } from "react-icons/fa";
 import { RiDownload2Fill } from "react-icons/ri";
-import "../css sheets/essay-page.css";
+import "../css-sheets/essay-page.css";
 
 
 function Persuasive() {
@@ -334,7 +334,7 @@ ${conclusion}
     return (
       <>
         <div className="essay-div">
-            <h1>Persuasive Essay</h1>
+            <h1 className="essay-div-title">Persuasive Essay</h1>
             <EssayProgression/>
             
            
