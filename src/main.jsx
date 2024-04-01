@@ -6,6 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Navigation from './components/navbar.jsx';
 import Home from './components/home.jsx';
 import Persuasive from './components/persuasive.jsx';
+import Expository from './components/expository.jsx';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
 
@@ -17,6 +18,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/persuasive" element={<Persuasive />} />
+        <Route path="/expository" element={<Expository />} />
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
     </HashRouter>

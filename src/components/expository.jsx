@@ -5,7 +5,7 @@ import { RiDownload2Fill } from "react-icons/ri";
 import "../css-sheets/essay-page.css";
 
 
-function Persuasive() {
+function Expository() {
     //State of progressbar
     const [progressbar, setProgressbar] = React.useState(0)
 
@@ -332,7 +332,7 @@ function Persuasive() {
     return (
       <>
         <div className="essay-div">
-            <h1 className="essay-div-title">Persuasive Essay</h1>
+            <h1 className="essay-div-title">Expository Essay</h1>
             <EssayProgression/>
             
            
@@ -373,7 +373,7 @@ function Persuasive() {
                                 - Background (Important information needed to understand the topic)
                             </ul>
                             <ul>
-                                - Thesis (What are your three reasons for your essay's position?)
+                                - Thesis (What are your three main ideas or reasons for your essay's position?)
                             </ul>
                         <textarea 
                         value={introduction}
@@ -391,7 +391,7 @@ function Persuasive() {
                     <Accordion.Body>
                         <p className="essay-instructions" style={{ whiteSpace: 'pre-line' }}>
                             Begin with a topic sentence that tells the reader what your first paragraph is about.
-                            Try to use about FIVE SENTENCES to explain your reason using two details and two examples for each. 
+                            Try to use about FIVE SENTENCES to explain your reason or main idea using two details and two examples for each. 
                         </p>
                         <div className="button-div">
                             <Evidencetransitions/>
@@ -415,7 +415,7 @@ function Persuasive() {
                     <Accordion.Body>
                         <p className="essay-instructions" style={{ whiteSpace: 'pre-line' }}>
                             Begin with a topic sentence that tells the reader what your second paragraph is about.
-                            Try to use about FIVE SENTENCES to explain your reason using two details and two examples for each. 
+                            Try to use about FIVE SENTENCES to explain your reason or main idea using two details and two examples for each. 
                         </p>
                         <div className="button-div">
                             <Evidencetransitions/>
@@ -439,7 +439,7 @@ function Persuasive() {
                     <Accordion.Body>
                         <p className="essay-instructions" style={{ whiteSpace: 'pre-line' }}>
                             Begin with a topic sentence that tells the reader what your third paragraph is about.
-                            Try to use about FIVE SENTENCES to explain your reason idea using two details and two examples for each. 
+                            Try to use about FIVE SENTENCES to explain your reason or main idea using two details and two examples for each. 
                         </p>
                         <div className="button-div">
                             <Evidencetransitions/>
@@ -522,5 +522,5 @@ function Persuasive() {
     )
   }
 
-  export default Persuasive
+  export default Expository
   

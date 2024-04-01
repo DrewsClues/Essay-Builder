@@ -12,12 +12,12 @@ function Navigation() {
     <>
       <Navbar expand="lg" className="custom-navbar-main" bg="dark" data-bs-theme="dark">
       <Container>
-        <Navbar.Brand as={Link} to="/"className='custom-navbar-brand-link'></Navbar.Brand>
+        <Navbar.Brand as={Link} to="/"className='custom-navbar-brand-link'>Essay Builder</Navbar.Brand>
         <Navbar.Toggle className="custom-toggler"/>
         <Navbar.Collapse id="basic-navbar-nav" >
           <Nav className="me-auto">
-              <Nav.Link as={Link} to="/" className='custom-navbar-links'>Home</Nav.Link>
               <Nav.Link as={Link} to="/persuasive" className='custom-navbar-links'>Persuasive</Nav.Link>
+              <Nav.Link as={Link} to="/expository" className='custom-navbar-links'>Expository</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

@@ -29,6 +29,7 @@
     width: 100%;
 }
 
+
 .essay-buttons{
     padding: 5px;
     
@@ -45,6 +46,28 @@
     box-sizing: border-box;
     margin: 3px; 
 }
+
+
+
+.essay-title{
+    text-align: center;
+}
+
+.essay-paragraph{
+    font-size: 14pt;
+    text-indent: 20pt;
+    word-wrap: break-word; 
+}
+
+.formatted-essay-area{
+    width: 90%;
+}
+
+
+
+
+
+
 
 @media (max-width: 1500px) {
     .button-div > * {
