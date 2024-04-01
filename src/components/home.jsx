@@ -14,19 +14,19 @@ function Home() {
         <div className="home-div">
           <div className="home-content">
             <h1 className='home-header'>Essay Builder</h1>
-            <div>
-                <img className='home-pic' src='transparent_profile.png'></img>
+            <div className="home-msg-div">
+              <img className="home-img" src="Logolg-outline.png"></img>
+              <br/>
+              <h3 className="home-message">
+                Draft Essays Step By Step
+
+              </h3>
+
+
+                
             </div>
 
-
-            <h2 className='home-message'>Web developer from Arizona USA, currently based in Seoul. </h2>
-            <button className='home-projects-link-button'>
             
-            </button>
-            
-
-     
-
           </div>
 
 
