@@ -2,6 +2,7 @@ import React from "react"
 import { ProgressBar, Accordion, Form, Button, Dropdown, DropdownButton, Modal } from "react-bootstrap";
 import { FaRegCopy } from "react-icons/fa";
 import { RiDownload2Fill } from "react-icons/ri";
+import { FcAbout } from "react-icons/fc";
 import "../css-sheets/essay-page.css";
 
 
@@ -30,17 +31,55 @@ function Expository() {
 
 
 
+    function Read_Expository() {
+        const [lgShow, setLgShow] = React.useState(false);
+        return (
+        <>
+            <FcAbout onClick={() => setLgShow(true)} className='read_about_icon'/>
+            <Modal
+            size="md"
+            width="50%"
+            show={lgShow}
+            onHide={() => setLgShow(false)}
+            aria-labelledby="example-modal-sizes-title-lg"
+            dialogClassName="custom-modal-dialog"
+            >
+            <Modal.Header closeButton>
+                <Modal.Title id="example-modal-sizes-title-lg">
+                What is an Expository Essay?
+                </Modal.Title>
+            </Modal.Header>
+            <Modal.Body className='about_modal_body'>
+            A 5-paragraph expository essay is a standard essay format commonly taught in schools and used 
+            in various academic settings. It consists of five paragraphs, each serving a specific purpose to 
+            convey information or explain a topic. Here's a breakdown of the structure: Introduction, 3 Body Paragraphs, 
+            and a Conclusion.
+            </Modal.Body>
+            </Modal>
+        </>
+        );
+    }
+
+
+
     //Download finished essay
     function downloadAsWordFile(content, filename) {
-        const blob = new Blob([content], { type: 'application/msword' });
-        const url = URL.createObjectURL(blob);
+
+        const blob = new Blob(["\ufeff", content], { type: 'application/vnd.openxmlformats-officedocument.wordprocessingml.document' });
+
         const link = document.createElement('a');
-        link.href = url;
+        link.href = URL.createObjectURL(blob);
+    
+
         link.download = filename + '.docx';
+    
         document.body.appendChild(link);
         link.click();
+    
         document.body.removeChild(link);
-        alert("Downloading Essay as a Word Document")
+        URL.revokeObjectURL(link.href);
+    
+        alert("Downloading Essay as a Word Document");
     }
 
 
@@ -332,7 +371,7 @@ function Expository() {
     return (
       <>
         <div className="essay-div">
-            <h1 className="essay-div-title">Expository Essay</h1>
+            <h1 className="essay-div-title">Expository Essay <Read_Expository/></h1>
             <EssayProgression/>
             
            
