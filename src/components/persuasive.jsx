@@ -62,24 +62,25 @@ function Persuasive() {
 
 
 
-     //Download finished essay
-    function downloadAsWordFile(content, filename) {
-
-        const blob = new Blob(["\ufeff", content], { type: 'application/vnd.openxmlformats-officedocument.wordprocessingml.document' });
-
+    //Download as Text file
+    function downloadAsTextFile(content, filename) {
+        
+        const blob = new Blob([content], { type: 'text/plain' });
+    
+       
         const link = document.createElement('a');
         link.href = URL.createObjectURL(blob);
+        link.download = filename + '.txt';
     
-
-        link.download = filename + '.docx';
-    
+       
         document.body.appendChild(link);
         link.click();
     
+      
         document.body.removeChild(link);
         URL.revokeObjectURL(link.href);
     
-        alert("Downloading Essay as a Word Document");
+        alert("Downloading Essay as a Text Document");
     }
     
 
@@ -209,6 +210,18 @@ function Persuasive() {
 
         // Set isCompiled to true
         setIsCompiled(true);
+        setFinish(
+`
+${title}            
+            
+${body1}            
+            
+${body2}    
+            
+${body3}
+            
+${conclusion}`
+        )
     }
 
 
@@ -534,7 +547,7 @@ function Persuasive() {
                             <RiDownload2Fill className="download-icon" onClick={() => {
                                 const formattedEssayArea = document.querySelector('.formatted-essay-area');
                                 if (formattedEssayArea) {
-                                    downloadAsWordFile(formattedEssayArea.innerHTML, 'document.docx');
+                                    downloadAsTextFile(document.querySelector('.formatted-essay-area').innerText, 'essay');
                                 } else {
                                     alert("Formatted essay area not found!");
                                 }
