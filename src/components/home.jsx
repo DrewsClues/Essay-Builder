@@ -7,35 +7,34 @@ import "../css-sheets/home.css";
 
 function Home() {
 
- 
-    return (        
-      <>
-        <>
-        <div className="home-div">
-          <div className="home-content">
-            <h1 className='home-header'>Essay Builder</h1>
-            <div className="home-msg-div">
-              <img className="home-img" src="Logolg-outline.png"></img>
-              <br/>
-              <h3 className="home-message">
-                Draft Essays Step By Step
+  return (
 
-              </h3>
+    <div className='home-container-content'>
+    <div className='home-containter-head'>
+    </div>
+    <div className='home-container-body'> 
 
-
-                
-            </div>
-
-            
-          </div>
-
-
-
-        </div>
-      </>
+      <div className='home-mission-div'>
+        <br/>
+        <h1>Welcome to</h1>
+          ESSAY BUILDER
+        <h3>Step By Step Essay Drafting</h3>
+        <h3>Helpful Tips & Reminders</h3>
+        <h3>Compile & Download</h3>
+        <br/>
         
-      </>
-    )
+      </div>
+
+      <div>
+        <img src='Logolg-outline.png' className='home-image'></img>
+      </div>
+      <br/>
+    
+    </div>
+    
+  </div>
+
+);
   }
 
   export default Home

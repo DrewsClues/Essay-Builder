@@ -1,23 +1,69 @@
-.home-div{
-    width: 50vw;
-    margin-left: auto;
-    margin-right: auto;
+.home-container-content {
+    height: auto; 
+    color: rgb(245, 245, 245);
+    max-width: 1200px;
+    width: 80%;
+    margin: 0 auto; 
+    background: #599fe5;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.25); 
+    overflow: hidden; 
+    border-radius: 10px; 
+    margin-bottom: 20px;
     margin-top: 5%;
 }
 
-.home-header{
-    text-align: center;
+.home-container-body {
+    display: flex;
+    overflow: hidden; 
 }
 
-.home-message{
-    text-align: center;
+.home-container-body > div {
+    flex: 1; 
+    margin-right: 20px; 
+    overflow: hidden; 
 }
 
-.home-msg-div{
+.home-image {
+    height: auto; 
+    max-width: 100%; 
+    width: auto; 
+    display: block; 
+    border-radius: 15px; 
+    margin-top: 50px;
+}
+
+.home-mission-div {
+    text-align: left;
+    padding-left: 20px;
+    font-size: 40pt; 
+    font-weight: bold;
     text-align: center;
+    margin-bottom: 20px;
 }
 
 
-.home-div-title{
-    text-align: center;
+
+@media (max-width: 1000px) {
+    .home-container-content {
+        height: auto;
+        width: 100%;
+        padding-top: 10vh;
+        overflow: auto;
+        border-radius: 0px; 
+        
+    }
+
+    .home-mission-div {
+        font-size: 30pt;
+        margin-bottom: 20px;
+    }
+
+    .home-container-body > div {
+        flex: 1 1 100%; 
+        margin-right: 0; 
+    }
+
+    .home-button {
+        width: 150px;
+    }
 }
