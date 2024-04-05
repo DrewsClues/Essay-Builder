@@ -2,7 +2,8 @@ import React from "react"
 import { ProgressBar, Accordion, Form, Button, Dropdown, DropdownButton, Modal } from "react-bootstrap";
 import { FaRegCopy } from "react-icons/fa";
 import { RiDownload2Fill } from "react-icons/ri";
-import { FcAbout } from "react-icons/fc";
+import { RiInformationFill } from "react-icons/ri";
+
 
 import "../css-sheets/essay-page.css";
 
@@ -36,7 +37,7 @@ function Persuasive() {
         const [lgShow, setLgShow] = React.useState(false);
         return (
         <>
-            <FcAbout onClick={() => setLgShow(true)} className='read_about_icon'/>
+            <RiInformationFill onClick={() => setLgShow(true)} className='read_about_icon'/>
             <Modal
             size="md"
             width="50%"
@@ -386,7 +387,10 @@ ${conclusion}`
       <>
         <div className="essay-div">
             <h1 className="essay-div-title">Persuasive Essay <Read_Persuasive/></h1>
-            <EssayProgression/>
+            <div className="progress-div">
+                <EssayProgression/>
+            </div>
+            
             
            
             <Accordion defaultActiveKey={['0']} alwaysOpen className="essay-accordion"> 
@@ -542,7 +546,7 @@ ${conclusion}`
                     <Accordion.Header>Finished Essay</Accordion.Header>
                     <Accordion.Body>
                         <div className="compile-button-div">
-                            <Button className="essay-buttons" onClick={CompileEssay}>Compile Essay</Button>
+                            <Button className="essay-buttons" variant="dark" onClick={CompileEssay}>Compile Essay</Button>
                             <FaRegCopy className="copy-icon" onClick={Copyfinishedessay}/>
                             <RiDownload2Fill className="download-icon" onClick={() => {
                                 const formattedEssayArea = document.querySelector('.formatted-essay-area');

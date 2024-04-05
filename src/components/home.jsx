@@ -26,7 +26,7 @@ function Home() {
       </div>
 
       <div>
-        <img src='Logolg-outline.png' className='home-image'></img>
+        <img src='LG-Logo.png' className='home-image'></img>
       </div>
       <br/>
     
