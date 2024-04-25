@@ -95,6 +95,7 @@ function Persuasive() {
         ) {
             setTitletisChecked(true);
             setProgressbar(progressbar + 5)
+
         }
         if (
             title == '' && titleisChecked == true
