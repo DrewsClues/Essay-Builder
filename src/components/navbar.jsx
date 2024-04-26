@@ -22,8 +22,8 @@ function Navigation() {
 
 
               <NavDropdown title="Compare & Contrast"  className='custom-navbar-links'   id="navbarScrollingDropdown">
-                <Nav.Link as={Link} to="/persuasive" className='custom-navbar-links'>Block Method</Nav.Link>
-                <Nav.Link as={Link} to="/persuasive" className='custom-navbar-links'>Point by Point</Nav.Link>
+                <Nav.Link as={Link} to="/blockmethod" className='custom-navbar-links'>Block Method</Nav.Link>
+                <Nav.Link as={Link} to="/pointbypoint" className='custom-navbar-links'>Point by Point</Nav.Link>
               </NavDropdown>
 
 
