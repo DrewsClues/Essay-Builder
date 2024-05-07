@@ -434,7 +434,7 @@ function Pointbypoint() {
                     <Accordion.Body>
                         <p className="essay-instructions" style={{ whiteSpace: 'pre-line' }}>
                             Begin with a topic sentence that tells the reader which point of comparison you'll be discussing.
-                            Try to use about FIVE SENTENCES to discuss your first point of comparison for both subjects. 
+                            Try to use about FIVE SENTENCES to discuss your first point of comparison for both subjects (give details about both!). 
                         </p>
                         <div className="button-div">
                             <Evidencetransitions/>
@@ -458,7 +458,7 @@ function Pointbypoint() {
                     <Accordion.Body>
                         <p className="essay-instructions" style={{ whiteSpace: 'pre-line' }}>
                             Begin with a topic sentence that tells the reader which point of comparison you'll be discussing.
-                            Try to use about FIVE SENTENCES to discuss your second point of comparison for both subjects. 
+                            Try to use about FIVE SENTENCES to discuss your second point of comparison for both subjects (give details about both!). 
                         </p>
                         <div className="button-div">
                             <Evidencetransitions/>
@@ -482,7 +482,7 @@ function Pointbypoint() {
                     <Accordion.Body>
                         <p className="essay-instructions" style={{ whiteSpace: 'pre-line' }}>
                             Begin with a topic sentence that tells the reader which point of comparison you'll be discussing.
-                            Try to use about FIVE SENTENCES to discuss your third point of comparison for both subjects. 
+                            Try to use about FIVE SENTENCES to discuss your third point of comparison for both subjects (give details about both!). 
                         </p>
                         <div className="button-div">
                             <Evidencetransitions/>
